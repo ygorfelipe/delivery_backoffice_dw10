@@ -1,0 +1,49 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+# excluindo os arqivos .g do mobX
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at
+  # https://dart-lang.github.io/linter/lints/index.html.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # nao ficar reclamando se a lib e ou nao para web
+    avoid_web_libraries_in_flutter: false
+    # nao coloca packge nos imports, mas sim os .../past ou lib
+    prefer_relative_imports: true
+    # obriga a colocar aspas simples em strings
+    prefer_single_quotes: true
+    # reclamar do await desnecessario
+    unnecessary_await_in_return: true
+    # todas as var serao finais
+    prefer_final_locals: true
+    prefer_final_fields: true
+    # reclama quando nao tem atributo sendo utilizado
+    avoid_unused_constructor_parameters: true
+    # reclama onde nao tem o tipo de reclado
+    always_declare_return_types: true
+    
+    
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options

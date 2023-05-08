@@ -1,0 +1,4 @@
+//* desabilitando hotreload no web
+{
+    "dart.flutterHotReloadOnSave": "never"
+}
