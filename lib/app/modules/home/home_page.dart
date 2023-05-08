@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../core/env.dart';
 import '../../core/ui/helpers/loader.dart';
 import '../../core/ui/helpers/messages.dart';
+import '../../core/ui/styles/colors_app.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,7 +28,9 @@ class _HomePageState extends State<HomePage> with Loader, Messages {
           showErro('Erro ao carregar dados');
         },
       ),
-      body: Text(Env.instance.get('backend_base_url')),
+      body: Container(
+          color: context.colors.primaryColor,
+          child: Text(Env.instance.get('backend_base_url'))),
     );
   }
 }
