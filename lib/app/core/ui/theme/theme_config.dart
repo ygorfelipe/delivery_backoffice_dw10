@@ -37,7 +37,6 @@ class ThemeConfig {
       labelStyle: TextStyles.instance.textRegular.copyWith(color: Colors.black),
       errorStyle:
           TextStyles.instance.textRegular.copyWith(color: Colors.redAccent),
-          
     ),
   );
 }
