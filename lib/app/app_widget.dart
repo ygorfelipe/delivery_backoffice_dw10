@@ -5,9 +5,11 @@ import 'core/ui/theme/theme_config.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
+    Modular.setInitialRoute('/login');
+
     return MaterialApp.router(
       title: 'Delivery BackOffice',
       theme: ThemeConfig.theme,
