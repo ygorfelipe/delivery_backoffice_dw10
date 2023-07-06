@@ -4,6 +4,8 @@ Este é o projeto Delivery BackOffice, desenvolvido por Rodrigo Rahman durante a
 
 Nesta edição da Dart Week, o foco foi no desenvolvimento do backoffice web usando 100% de recursos da web e responsividade. O projeto utilizou o framework Flutter Modular, desenvolvido pela Flutterando, e o MobX.
 
+## Arquitetura Utilizada
+
 ## Flutter Modular
 
 Flutter Modular é um gerenciador de dependências que facilita o processo de injeção de dependências na aplicação. Ele ajuda a organizar e delegar as dependências da aplicação, facilitando a manutenção e a escalabilidade.
