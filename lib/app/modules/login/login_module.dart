@@ -4,6 +4,7 @@ import '../../repositories/auth/auth_repository.dart';
 import '../../repositories/auth/auth_repository_impl.dart';
 import '../../services/auth/login_service.dart';
 import '../../services/auth/login_service_impl.dart';
+import 'login_controller.dart';
 import 'login_page.dart';
 
 class LoginModule extends Module {
@@ -11,11 +12,12 @@ class LoginModule extends Module {
   List<Bind> get binds => [
         Bind.lazySingleton<AuthRepository>((i) => AuthRepositoryImpl(i())),
         Bind.lazySingleton<LoginService>((i) => LoginServiceImpl(i(), i())),
+        Bind.lazySingleton((i) => LoginController(i())),
       ];
 
   @override
   List<ModularRoute> get routes => [
-        ChildRoute(Modular.initialRoute,
+        ChildRoute('/',
             child: (context, args) => const LoginPage())
       ];
 }
